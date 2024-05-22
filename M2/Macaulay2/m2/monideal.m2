@@ -7,6 +7,10 @@ needs "matrix2.m2"
 -- MonomialIdeal type declaration and basic constructors
 -----------------------------------------------------------------------------
 
+-----------------------------------------------------------------------------
+-- MonomialIdeal type declaration and basic constructors
+-----------------------------------------------------------------------------
+
 MonomialIdeal = new Type of Ideal
 MonomialIdeal.synonym = "monomial ideal"
 
