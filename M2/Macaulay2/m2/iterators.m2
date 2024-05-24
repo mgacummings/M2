@@ -13,8 +13,11 @@ next Iterator := iter -> iter()
 
 net Iterator := iter -> if hasAttribute(iter,ReverseDictionary) then net getAttribute(iter,ReverseDictionary) else (
     x := if not (first frames iter)#?0 then () else first first frames iter;
-    net FunctionApplication(iterator,
-	(if instance(x, String) then format else identity) x))
+    FunctionApplication{iterator,
+	(if instance(x, String) then format else expression) x}
+    )
+net Iterator := net @@ expression
+toString Iterator := toString @@ expression
 
 iterator VisibleList :=
 iterator String      := x -> Iterator (

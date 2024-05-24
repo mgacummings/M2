@@ -1051,7 +1051,7 @@ texMathSuperscript := v -> (
     x := texMath v#0;
     y := texMath v#1;
     if precedence v#0 < p or class v#0 === Superscript or class v#0 === Power then x = "\\left(" | x | "\\right)"; -- precedence of double superscript
-    concatenate(x,"^{",y,"}") -- no braces around x
+    concatenate(x,"_{",y,"}",if class v#0===Symbol and last toString v#0=="'" then "{}") -- no braces around x
 )
 texMath Power := v -> if v#1 === 1 or v#1 === ONE then texMath v#0 else texMathSuperscript v
 texMath Superscript := v -> if v#1 === moduleZERO then "0" else texMathSuperscript v
