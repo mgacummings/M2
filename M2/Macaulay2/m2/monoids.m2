@@ -467,9 +467,6 @@ makeVars = (n, var) -> toList(
 -- TODO: why is (symbol <-, T) and not (symbol <-, T, Thing) the right method sequence for assignment?
 checkSymbol = sym -> if instance(sym, Symbol) or lookup(symbol <-, class sym) =!= null then sym else error()
 
--- TODO: the compiled function remove should return the removed value
-remove' = (L, i) -> (x := L#i; remove(L, i); x)
-
 -- turns {x, y, z, y} into {x, y_0, z, y_1}
 -- adding 'toString' in a few places will eliminate more duplications
 -- but makes creating temporary rings in functions more difficult.
