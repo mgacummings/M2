@@ -175,7 +175,9 @@ Node
       @TO "true"@ if {\tt I} is a prime ideal, or @TO "false"@ otherwise
   Description
     Text
-      This function determines whether an ideal in a polynomial ring is prime.
+      This function determines whether an ideal {\tt I} in a polynomial ring is prime.
+      To do so, the @TO minimalPrimes@ are computed and checked whether the only minimal prime 
+      is the given ideal {\tt I}.
     Example
       R = QQ[a..d];
       I = monomialCurveIdeal(R, {1, 5, 8})
