@@ -850,7 +850,7 @@ eint(e:Expr):Expr := (
      is x:RRcell do toExpr(eint(x.v))				    -- # typical value: eint, RR, RR
      is x:RRicell do toExpr(eint(x.v))				    -- # typical value: eint, RRi, RRi
      is x:CCcell do toExpr(eint(x.v))				    -- # typical value: eint, CC, CC
-     else WrongArgRRorCC()
+     else WrongArgRRorRRiorCC()
      );
 setupfun("eint",eint).Protected=false;
 Gamma(e:Expr):Expr := (
@@ -879,7 +879,7 @@ Gamma(e:Expr):Expr := (
 		 is x:CCcell do toExpr(Gamma(s.v,      x.v))	    -- # typical value: Gamma, CC, CC, CC
 		 else WrongArgRRorCC(2))
 	     else WrongArgRRorCC(2))
-     else WrongArgRRorCC()
+     else WrongArgRRorRRiorCC()
      );
 setupfun("Gamma",Gamma).Protected=false;
 regularizedGamma(e:Expr):Expr := (
@@ -926,7 +926,7 @@ lgamma(e:Expr):Expr := (
      is x:RRcell do lgamma(x.v)				    -- # typical value: lgamma, RR, RR
      is x:RRicell do toExpr(lgamma(x.v))		    -- # typical value: lgamma, RRi, RRi
      is x:CCcell do toExpr(lgamma(x.v))			    -- # typical value: lgamma, CC, CC
-     else WrongArgRRorCC()
+     else WrongArgRRorRRiorCC()
      );
 setupfun("lgamma",lgamma);
 zeta(e:Expr):Expr := (
@@ -934,7 +934,7 @@ zeta(e:Expr):Expr := (
      is x:RRcell do toExpr(zeta(x.v))				    -- # typical value: zeta, RR, RR
      is x:RRicell do toExpr(zeta(x.v))				    -- # typical value: zeta, RRi, RRi
      is x:CCcell do toExpr(zeta(x.v))                               -- # typical value: zeta, CC, CC
-     else WrongArgRRorCC()
+     else WrongArgRRorRRiorCC()
      );
 setupfun("zeta",zeta).Protected=false;
 erf(e:Expr):Expr := (
@@ -942,7 +942,7 @@ erf(e:Expr):Expr := (
      is x:RRcell do toExpr(erf(x.v))				    -- # typical value: erf, RR, RR
      is x:RRicell do toExpr(erf(x.v))				    -- # typical value: erf, RRi, RRi
      is x:CCcell do toExpr(erf(x.v))				    -- # typical value: erf, CC, CC
-     else WrongArgRRorCC()
+     else WrongArgRRorRRiorCC()
      );
 setupfun("erf",erf).Protected=false;
 erfc(e:Expr):Expr := (
@@ -950,7 +950,7 @@ erfc(e:Expr):Expr := (
      is x:RRcell do toExpr(erfc(x.v))				    -- # typical value: erfc, RR, RR
      is x:RRicell do toExpr(erfc(x.v))				    -- # typical value: erfc, RRi, RRi
      is x:CCcell do toExpr(erfc(x.v))				    -- # typical value: erfc, CC, CC
-     else WrongArgRRorCC()
+     else WrongArgRRorRRiorCC()
      );
 setupfun("erfc",erfc).Protected=false;
 inverseErf(e:Expr):Expr := (
@@ -1089,7 +1089,7 @@ Beta(yy:Expr,xx:Expr):Expr := (
 	  is x:RRcell do toExpr(Beta(y.v, toCC(x.v)))		    -- # typical value: Beta, CC, RR, CC
 	  is x:CCcell do toExpr(Beta(y.v, x.v))			    -- # typical value: Beta, CC, CC, CC
 	  else WrongArgRRorCC(2))
-     else WrongArgRRorCC(1)
+     else WrongArgRRorRRiorCC(1)
      );
 Beta(e:Expr):Expr := (
      when e is s:Sequence do if length(s) == 2 then Beta(s.0,s.1)
