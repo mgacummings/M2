@@ -620,6 +620,8 @@ loadCore = path -> (
 
 (core "runStartFunctions")()
 
+(core "runStartFunctions")()
+
 loadDepth = 0;
 ( loadDepth = 3;
      processCommandLineOptions 4;
