@@ -123,6 +123,8 @@ generateTypicalValues = (srcdir) -> (
 -- if missing, tvalues.m2 is regenerated directly
 if not fileExists typicalValuesSource then generateTypicalValues(currentFileDirectory | "../d/")
 
+if not fileExists typicalValuesSource then generateTypicalValues(currentFileDirectory | "../d/")
+
 -----------------------------------------------------------------------------
 -- numerical functions that will be wrapped
 redefs := hashTable apply({acos, agm, asin, atan, atan2, Beta, cos, cosh, cot, coth, csc, csch, Digamma, eint, erf, erfc, exp, expm1, Gamma, inverseErf, inverseRegularizedBeta, inverseRegularizedGamma, log, log1p, regularizedBeta, regularizedGamma, sec, sech, sin, sinh, sqrt, tan, tanh, zeta},
