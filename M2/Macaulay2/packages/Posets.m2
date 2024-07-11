@@ -31,6 +31,9 @@ newPackage(
             "FourTiTwo",
             "Complexes"
             },
+        PackageImports => {
+            "Complexes"
+            },
 	Certification => {
 	     "journal name" => "The Journal of Software for Algebra and Geometry",
 	     "journal URI" => "https://msp.org/jsag/",
