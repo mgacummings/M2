@@ -21,7 +21,14 @@ export UnaryInstallMethodFun := dummyTernaryFun;
 export InstallValueFun := dummyMultaryFun;
 export UnaryInstallValueFun := dummyTernaryFun;
 
+combinePosition(a:Position,b:Position):Position := Position(a.filename,b.line,b.column,a.line1,a.column1,b.line2,b.column2,a.loadDepth); -- combine with emphasis on right
+combinePositionLeft(a:Position,b:Position):Position := Position(a.filename,a.line,a.column,a.line1,a.column1,b.line2,b.column2,a.loadDepth); -- combine with emphasis on left
+combinePosition(a:Position,b:Position,c:Position):Position := Position(a.filename,c.line,c.column,a.line1,a.column1,b.line2,b.column2,a.loadDepth); -- left, right, center
+combinePositionAdjacent(a:Position,b:Position):Position := Position(a.filename,a.line2,a.column2,a.line1,a.column1,b.line2,b.column2,a.loadDepth); -- special for Adjacent
+
+convert0(e:ParseTree):Code;
 convert(e:ParseTree):Code;
+unseq(c:Code):Code;
 CodeSequenceLength(e:ParseTree,separator:Word):int := (
      i := 0;
      while true do (
@@ -358,6 +365,9 @@ export unseq(c:Code):Code := (
     then s.x.0 else c else c);
 
 export convert(e:ParseTree):Code := unseq(convert0(e));
+
+export convert(e:ParseTree):Code := unseq(convert0(e));
+
 
 -- Local Variables:
 -- compile-command: "echo \"make: Entering directory \\`$M2BUILDDIR/Macaulay2/d'\" && make -C $M2BUILDDIR/Macaulay2/d convertr.o "
