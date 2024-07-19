@@ -1,3 +1,8 @@
+msolvePresent := run ("type msolve >/dev/null 2>&1") === 0
+-- msolveVersion := if msolvePresent then ... -- no way to get version info!!!
+msolveVersionNeeded := "0.6.4"
+msolvePresentAndModern := msolvePresent -- and match("^[0-9.]+$",msolveVersion) and msolveVersion >= msolveVersionNeeded
+
 newPackage(
 	"Msolve",
 	Version => "1.24.05", 
