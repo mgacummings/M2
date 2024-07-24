@@ -775,11 +775,6 @@ document {
      "See ", TO "===", " for details."
      }
 
-isMissingDoc := core "isMissingDoc"
-isUndocumented := core "isUndocumented"
-equalityMethods := select(makeDocumentTag \ methods symbol ==,
-    m -> package m === Macaulay2Doc and not isUndocumented m and isMissingDoc m)
-
 document {
     Key => { symbol == },
      Headline => "equality",
