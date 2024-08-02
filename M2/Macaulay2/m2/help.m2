@@ -565,7 +565,7 @@ about Symbol   :=
 about Function := o -> f -> about("\\b" | toString f | "\\b", o)
 about String   := o -> re -> lastabout = (
     packagesSeen := new MutableHashTable;
-    NumberedVerticalList apply(sort join(
+    NumberedVerticalList sort join(
         flatten for pkg in loadedPackages list (
             pkgname := pkg#"pkgname";
             if packagesSeen#?pkgname then continue else packagesSeen#pkgname = 1;
