@@ -120,6 +120,8 @@ readMsolveList = mOutStr -> (
     mOutStr)
 
 readMsolveList = mOutStr -> (
+    mOutStr = toString stack select(lines mOutStr,
+	line -> not match("#", line));
     mOutStr = replace("\\[", "{", mOutStr);
     mOutStr = replace("\\]", "}", mOutStr);
     -- e.g. 'p_0' to "p_0"
