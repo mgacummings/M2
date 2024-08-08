@@ -127,7 +127,7 @@ readMsolveList = mOutStr -> (
     -- e.g. 'p_0' to "p_0"
     mOutStr = replace("'", "\"",  mOutStr);
     mOutStr = first separate(":", mOutStr);
-    value mOutStr)
+    mOutStr)
 
 msolveGB = method(TypicalValue => Matrix, Options => msolveDefaultOptions)
 msolveGB Ideal := opts -> I0 -> (
