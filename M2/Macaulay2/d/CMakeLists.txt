@@ -77,7 +77,6 @@ set(DLIST
   mysqldummy.d	# removed if WITH_SQL
   pthread.d
   actors.d
-  debugging.dd
   actors2.dd
   actors3.d
   actors4.d
