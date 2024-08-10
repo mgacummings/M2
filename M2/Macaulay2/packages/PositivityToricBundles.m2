@@ -399,7 +399,7 @@ graphToricChernCharacter (ToricVectorBundleKlyachko) := {Verbosity => 0} >> opts
 
 -- hT .. hashTable
 -- fun .. function that takes key and value as input and returns true or false
-selectPairs = (hT, fun) -> hashTable select(pairs hT, (k,v) -> fun(k,v) )
+--selectPairs = (hT, fun) -> hashTable select(pairs hT, (k,v) -> fun(k,v) )
 
 separatesJetsLocally = method( Options => true )
 separatesJetsLocally (ToricVectorBundleKlyachko,Cone) := {Verbosity => 0} >> opts -> (tvb,sigma) -> (
