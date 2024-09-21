@@ -171,6 +171,14 @@ convertParentheses(seq:CodeSequence, word:Word, pos:Position):Code := (
     dummyCode -- should not happen
     );
 
+convertParentheses(seq:CodeSequence, word:Word, pos:Position):Code := (
+    if word == leftparen    then Code(sequenceCode(seq,     pos)) else
+    if word == leftbrace    then Code(listCode(seq,         pos)) else
+    if word == leftbracket  then Code(arrayCode(seq,        pos)) else
+    if word == leftAngleBar then Code(angleBarListCode(seq, pos)) else
+    dummyCode -- should not happen
+    );
+
 export convert0(e:ParseTree):Code := (
     pos := treePosition(e);
     when e
