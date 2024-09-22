@@ -21,9 +21,7 @@ export UnaryInstallMethodFun := dummyTernaryFun;
 export InstallValueFun := dummyMultaryFun;
 export UnaryInstallValueFun := dummyTernaryFun;
 
-convert0(e:ParseTree):Code;
 convert(e:ParseTree):Code;
-unseq(c:Code):Code;
 CodeSequenceLength(e:ParseTree,separator:Word):int := (
      i := 0;
      while true do (
@@ -371,6 +369,7 @@ export convert(e:ParseTree):Code := unseq(convert0(e));
 
 export convert(e:ParseTree):Code := unseq(convert0(e));
 
+export convert(e:ParseTree):Code := unseq(convert0(e));
 
 -- Local Variables:
 -- compile-command: "echo \"make: Entering directory \\`$M2BUILDDIR/Macaulay2/d'\" && make -C $M2BUILDDIR/Macaulay2/d convertr.o "
