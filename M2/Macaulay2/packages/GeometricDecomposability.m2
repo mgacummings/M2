@@ -8,8 +8,8 @@ newPackage(
         Authors => {
                 {
                 Name => "Mike Cummings",
-                Email => "cummim5@mcmaster.ca",
-                HomePage => "https://math.mcmaster.ca/~cummim5/"
+                Email => "mike.cummings@uwaterloo.ca",
+                HomePage => "https://mikecummings.ca"
                 },
                 {
                 Name => "Adam Van Tuyl",
