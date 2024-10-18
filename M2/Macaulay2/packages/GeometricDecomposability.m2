@@ -1719,7 +1719,7 @@ doc///
                         [KR] Patricia Klein and Jenna Rajchgot. Geometric vertex decomposition and
                         liaison. Forum Math. Sigma 9 (2021) e70, 1–23.
                         
-                See Also
+                SeeAlso
                         findOneStepGVD
                         getGVDIdeal
                         isGVD
