@@ -872,7 +872,6 @@ doc///
                         matroidal ideals. Arch. Math. 114 (2020), no. 3 299–-304.
 
                 Subnodes
-                        oneStepGVDNyI
                         findLexCompatiblyGVDOrders
                         findOneStepGVD
                         getGVDIdeal
@@ -882,8 +881,9 @@ doc///
                         isLexCompatiblyGVD
                         isUnmixed
                         isWeaklyGVD
-                        oneStepGVDCyI
                         oneStepGVD
+                        oneStepGVDCyI
+                        oneStepGVDNyI
                         CheckCM
                         CheckDegenerate
                         CheckUnmixed
